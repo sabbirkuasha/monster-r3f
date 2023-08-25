@@ -2,7 +2,9 @@
 
 **Required Packages**
 
-`npm install three @react-three/fiber @react-three/drei @react-three/postprocessing leva`
+```terminal
+npm install three @react-three/fiber @react-three/drei @react-three/postprocessing leva
+```
 
 `@react-three/gltfjsx`
 
