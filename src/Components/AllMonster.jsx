@@ -1,31 +1,29 @@
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import {
+  Environment,
+  OrbitControls,
+  PerspectiveCamera,
+  useTexture,
+} from "@react-three/drei";
+import { BackSide } from "three";
 
 export default function Experience() {
+  const map = useTexture("HDRI/meadow_1k.jpg");
   return (
     <>
       {/* <color attach="background" args={["#ececec"]} /> */}
+      <Environment preset="city" />
       <OrbitControls target={[0, 0.35, 0]} maxPolarAngle={1.45} />
       <PerspectiveCamera makeDefault fov={50} position={[3, 2, 5]} />
       <mesh castShadow receiveShadow>
-        <boxGeometry args={[1, 1, 1]} />
+        {/* <boxGeometry args={[1, 1, 1]} /> */}
+
+        <sphereGeometry args={[7, 128, 128]} />
+        <meshStandardMaterial map={map} side={BackSide} />
+      </mesh>
+      <mesh castShadow receiveShadow>
+        <sphereGeometry args={[1, 128, 128]} />
         <meshNormalMaterial />
       </mesh>
     </>
   );
 }
-
-// This version of code will works too, since this time we are exporting named function we have to import using curly brace
-// "use client";
-// import { OrbitControls } from "@react-three/drei";
-
-// export const Experience = () => {
-//   return (
-//     <>
-//       <OrbitControls />
-//       <mesh>
-//         <boxGeometry />
-//         <meshNormalMaterial />
-//       </mesh>
-//     </>
-//   );
-// };
