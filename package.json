@@ -11,12 +11,12 @@
   "dependencies": {
     "@react-three/drei": "^9.80.6",
     "@react-three/fiber": "^8.13.7",
-    "@react-three/gltfjsx": "^4.3.4",
     "@react-three/postprocessing": "^2.15.1",
     "autoprefixer": "10.4.15",
     "daisyui": "^3.6.3",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
+    "gltfjsx": "^6.2.12",
     "leva": "^0.9.35",
     "next": "13.4.19",
     "postcss": "8.4.28",
