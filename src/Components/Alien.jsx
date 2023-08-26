@@ -14,8 +14,8 @@ export function Alien(props) {
 
   useEffect(() => {
     actions["Walk"].reset().fadeIn(0.5).play();
-    return () => actions["Idle"].fadeOut(0.5);
-  }, []);
+    return () => actions["Walk"];
+  });
 
   return (
     <group ref={group} {...props} dispose={null}>
