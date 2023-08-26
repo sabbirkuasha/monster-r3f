@@ -8,6 +8,8 @@ import {
 } from "@react-three/drei";
 import { BackSide, DoubleSide } from "three";
 import { Alien } from "./Alien";
+import { Tribal } from "./Tribal";
+import { Frog } from "./Frog";
 
 export default function Experience() {
   return (
@@ -24,15 +26,15 @@ export default function Experience() {
         position={[4, 0, 0]}
         rotation-y={-Math.PI / 8}
       >
-        <Alien position={[0, -1.5, 0]} />
+        <Tribal position={[4, -1.5, 0]} />
       </MonsterStage>
-      {/* <MonsterStage
+      <MonsterStage
         texture={"HDRI/spree_bank_1k.jpg"}
         position={[-4, 0, 0]}
         rotation-y={Math.PI / 8}
       >
-        <Alien position={[0, -1.5, 0]} />
-      </MonsterStage> */}
+        <Frog position={[-4, -1.5, 0]} />
+      </MonsterStage>
     </>
   );
 }
@@ -44,6 +46,7 @@ const MonsterStage = ({ children, texture, ...props }) => {
       <RoundedBox args={[4, 6, 0.3]}>
         <planeGeometry args={[3, 5]} />
         <MeshPortalMaterial side={DoubleSide}>
+          <PerspectiveCamera makeDefault fov={50} position={[0, 0, 8]} />
           <OrbitControls target={[0, 0.35, 0]} />
           {children}
           {/* <Alien position={[0, -1.5, 0]} /> */}
