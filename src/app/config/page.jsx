@@ -11,10 +11,9 @@ export default function Home() {
       <div className="h-[700px]">
         {/* <Configurator /> */}
         <Suspense fallback={null}>
-          <Canvas shadows camera={{ position: [2, 0, 1], fov: 50 }}>
+          <Canvas shadows camera={{ position: [3, 1.45, 3], fov: 50 }}>
             {/* <color attach="background" args={["#101010"]} /> */}
             <Configurator />
-            <mesh></mesh>
           </Canvas>
         </Suspense>
       </div>
