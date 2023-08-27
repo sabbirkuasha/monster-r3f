@@ -1,4 +1,5 @@
 import {
+  CameraShake,
   Environment,
   MeshPortalMaterial,
   OrbitControls,
@@ -18,6 +19,15 @@ export default function Experience() {
       <ambientLight intensity={2.5} />
       <PerspectiveCamera makeDefault fov={50} position={[0, 0, 8]} />
       <OrbitControls target={[0, 0.35, 0]} />
+      <CameraShake
+        maxPitch={0.05}
+        maxRoll={0.05}
+        maxYaw={0.05}
+        pitchFrequency={0.8}
+        rollFrequency={0.8}
+        yawFrequency={0.8}
+      />
+
       <MonsterStage texture={"HDRI/meadow_1k.jpg"}>
         <Alien position={[0, -1.5, 0]} />
       </MonsterStage>
@@ -48,6 +58,14 @@ const MonsterStage = ({ children, texture, ...props }) => {
         <MeshPortalMaterial side={DoubleSide}>
           <PerspectiveCamera makeDefault fov={50} position={[0, 0, 8]} />
           <OrbitControls target={[0, 0.35, 0]} />
+          <CameraShake
+            maxPitch={0.05}
+            maxRoll={0.05}
+            maxYaw={0.05}
+            pitchFrequency={0.8}
+            rollFrequency={0.8}
+            yawFrequency={0.8}
+          />
           {children}
           {/* <Alien position={[0, -1.5, 0]} /> */}
           <mesh castShadow receiveShadow>

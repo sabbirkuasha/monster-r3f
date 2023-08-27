@@ -1,5 +1,6 @@
 import {
   AccumulativeShadows,
+  CameraShake,
   ContactShadows,
   Environment,
   MeshReflectorMaterial,
@@ -14,6 +15,7 @@ export default function Configurator() {
   return (
     <>
       <OrbitControls autoRotate autoRotateSpeed={0.05} makeDefault />
+
       {/* <Environment preset="city" /> */}
       <Environment
         files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/dancing_hall_1k.hdr"
