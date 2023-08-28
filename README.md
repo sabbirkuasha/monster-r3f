@@ -1,4 +1,8 @@
-[Tutorial that i have followed](https://www.youtube.com/watch?v=2W_VR92Pqgs&list=PLpepLKamtPjiUF6PvVUbIFhx9HaS0qJs_)
+**Tutorial that I have followed**
+
+[Monster](https://www.youtube.com/watch?v=2W_VR92Pqgs&list=PLpepLKamtPjiUF6PvVUbIFhx9HaS0qJs_)
+
+[Configurator](https://www.youtube.com/watch?v=LNvn66zJyKs&t=185s)
 
 **Required Packages**
 

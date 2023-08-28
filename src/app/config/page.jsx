@@ -14,6 +14,7 @@ export default function Home() {
 
         <Suspense fallback={<Loader />}>
           <Canvas shadows camera={{ position: [3, 1.45, 3], fov: 50 }}>
+            <fog attach={"fog"} args={["#374151", 10, 20]} />
             <Configurator />
           </Canvas>
         </Suspense>

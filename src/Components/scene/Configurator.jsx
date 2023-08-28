@@ -15,11 +15,12 @@ export default function Configurator() {
   return (
     <>
       <OrbitControls autoRotate autoRotateSpeed={0.05} makeDefault />
+      {/* <color attach="background" args={[55, 65, 81]} /> */}
 
       {/* <Environment preset="city" /> */}
       <Environment
         files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/dancing_hall_1k.hdr"
-        background
+        background={false}
         blur={0.01}
       />
       {/* <mesh>
